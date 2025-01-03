@@ -25,11 +25,12 @@
 	padding: 0.5rem 1rem;
 }
 
-.grid {
+.container {
 	display: flex;
+	align-items: center;
 }
 
-.right {
+.left {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -60,4 +61,12 @@ input[type="color"] {
 	width: 50px;
 	height: 50px;
 	border-radius: 99%;
+}
+
+.gridContainer {
+	margin-top: 20px;
+	display: grid;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	width: 350px;
+	height: 350px;
 }
