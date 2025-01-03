@@ -13,14 +13,8 @@
 			<h1 class="title">Etch a Sketch</h1>
 		</header>
 		<div class="container">
-			<div class="left"></div>
-			<div class="right">
-				<input
-					type="color"
-					name="color"
-					id="color"
-					class="color"
-					value="#add8e6" />
+			<div class="left">
+				<input type="color" name="color" id="color" class="color" />
 				<button id="brush">Color Mode</button>
 				<button id="rainbow">Rainbow mode</button>
 				<button id="eraser">Eraser</button>
@@ -28,11 +22,14 @@
 				<p id="gridSize">16 x 16</p>
 				<input
 					type="range"
-					name="grid"
+					name="gridInput"
 					id="gridInput"
 					min="1"
 					max="64"
 					value="16" />
+			</div>
+			<div class="right">
+				<div id="gridContainer" class="gridContainer"></div>
 			</div>
 		</div>
 		<footer class="credits">
