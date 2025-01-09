@@ -14,11 +14,6 @@ function updateCopyright() {
 }
 updateCopyright();
 
-function initGrid() {
-	createGrid(16);
-}
-initGrid();
-
 function updateGridSizeDisplay(size) {
 	const gridSize = document.querySelector("#gridSize");
 	gridSize.textContent = `${size} x ${size}`;
@@ -35,18 +30,22 @@ function createGrid(size) {
 		gridContainer.append(gridItem);
 	}
 }
+createGrid(16);
 
-gridInput.addEventListener("input", (e) => {
-	const size = e.target.value;
-	gridInput.attributes.value.value = size;
+function changeGridSize() {
+	gridInput.addEventListener("change", (e) => {
+		const size = e.target.value;
+		gridInput.attributes.value.value = size;
 
-	updateGridSizeDisplay(size);
-	createGrid(size);
+		updateGridSizeDisplay(size);
+		createGrid(size);
 
-	let color = colorInput.value;
-	getColor();
-	colorGrid(color);
-});
+		let color = colorInput.value;
+		getColor();
+		colorGrid(color);
+	});
+}
+changeGridSize();
 
 function getColor() {
 	colorInput.addEventListener("change", (e) => {
