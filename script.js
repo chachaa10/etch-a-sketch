@@ -9,15 +9,16 @@ const rainbowBtn = document.querySelector("#rainbow");
 const eraserBtn = document.querySelector("#eraser");
 const clearBtn = document.querySelector("#clear");
 
-// Initialize grid
-gridContainer.style.gridTemplateColumns = `repeat(16, 1fr)`;
-gridContainer.style.gridTemplateRows = `repeat(16, 1fr)`;
-
 function updateCopyright() {
 	const copyright = document.querySelector("#copyright");
 	copyright.textContent = `Copyright © ${new Date().getFullYear()} by Chalex`;
 }
 updateCopyright();
+
+function initGrid() {
+	createGrid(16);
+}
+initGrid();
 
 function updateGridSizeDisplay(size) {
 	const gridSize = document.querySelector("#gridSize");
@@ -32,15 +33,15 @@ function createGrid(size) {
 	for (let i = 0; i < size * size; i++) {
 		const gridItem = document.createElement("div");
 		gridItem.classList.add("grid-item");
-		gridContainer.appendChild(gridItem);
+		gridContainer.append(gridItem);
 	}
 }
 
 gridInput.addEventListener("input", (e) => {
 	const size = e.target.value;
-	updateGridSizeDisplay(size);
 	gridInput.attributes.value.value = size;
 
+	updateGridSizeDisplay(size);
 	createGrid(size);
 });
 
