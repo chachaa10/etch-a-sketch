@@ -48,7 +48,6 @@ gridInput.addEventListener("input", (e) => {
 	colorGrid(color);
 });
 
-// TODO: Add funtionality to update the color of the grid items
 function getColor() {
 	colorInput.addEventListener("change", (e) => {
 		let color = e.target.value;
