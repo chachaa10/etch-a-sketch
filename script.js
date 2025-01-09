@@ -101,3 +101,12 @@ function rainbowMode() {
 	});
 }
 
+function clearColor() {
+	clearBtn.addEventListener("click", () => {
+		const gridItems = gridContainer.querySelectorAll(".grid-item");
+		gridItems.forEach((item) => {
+			item.style.backgroundColor = "";
+		});
+	});
+}
+clearColor();
