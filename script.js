@@ -73,10 +73,12 @@ function colorGrid(color) {
 }
 colorGrid(colorInput.value);
 
-rainbowBtn.addEventListener("click", () => {
-	createGrid(gridInput.value);
-	rainbowMode();
-});
+function activateRainbowMode() {
+	rainbowBtn.addEventListener("click", () => {
+		rainbowMode();
+	});
+}
+activateRainbowMode();
 
 function randomColor() {
 	return Math.floor(Math.random() * 16777215)
