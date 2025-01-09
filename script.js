@@ -1,6 +1,5 @@
 const gridInput = document.querySelector("#gridInput");
 const gridContainer = document.querySelector("#gridContainer");
-const gridItems = gridContainer.querySelectorAll(".grid-item");
 
 // Get references to the buttons
 const colorInput = document.querySelector("#color");
