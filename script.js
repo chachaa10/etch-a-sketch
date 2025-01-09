@@ -71,4 +71,33 @@ function colorGrid(color) {
 		});
 	});
 }
-colorGrid("black");
+colorGrid(colorInput.value);
+
+rainbowBtn.addEventListener("click", () => {
+	createGrid(gridInput.value);
+	rainbowMode();
+});
+
+function randomColor() {
+	return Math.floor(Math.random() * 16777215)
+		.toString(16)
+		.padStart(6, "0");
+}
+
+function rainbowMode() {
+	const gridItems = gridContainer.querySelectorAll(".grid-item");
+
+	gridItems.forEach((item) => {
+		item.addEventListener("mouseover", (e) => {
+			if (e.buttons === 1) {
+				// Only apply when the left mouse button is held
+				item.style.backgroundColor = `#${randomColor()}`;
+			}
+		});
+
+		item.addEventListener("mousedown", () => {
+			item.style.backgroundColor = `#${randomColor()}`;
+		});
+	});
+}
+
