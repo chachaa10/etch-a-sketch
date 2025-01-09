@@ -42,6 +42,35 @@ gridInput.addEventListener("input", (e) => {
 
 	updateGridSizeDisplay(size);
 	createGrid(size);
+
+	let color = colorInput.value;
+	getColor();
+	colorGrid(color);
 });
 
 // TODO: Add funtionality to update the color of the grid items
+function getColor() {
+	colorInput.addEventListener("change", (e) => {
+		let color = e.target.value;
+
+		colorGrid(color);
+	});
+}
+getColor();
+
+function colorGrid(color) {
+	const gridItems = gridContainer.querySelectorAll(".grid-item");
+	gridItems.forEach((item) => {
+		item.addEventListener("mouseover", (e) => {
+			if (e.buttons === 1) {
+				// Only color when the left mouse button is held
+				item.style.backgroundColor = color;
+			}
+		});
+
+		item.addEventListener("mousedown", () => {
+			item.style.backgroundColor = color;
+		});
+	});
+}
+colorGrid("black");
