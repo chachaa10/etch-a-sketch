@@ -112,3 +112,11 @@ function clearColor() {
 	});
 }
 clearColor();
+
+const color = colorInput.value;
+function activateBrushMode() {
+	brushBtn.addEventListener("click", () => {
+		colorGrid(color);
+	});
+}
+activateBrushMode();
