@@ -120,3 +120,24 @@ function activateBrushMode() {
 	});
 }
 activateBrushMode();
+
+function activateEraserMode() {
+	eraserBtn.addEventListener("click", () => {
+		const gridItems = gridContainer.querySelectorAll(".grid-item");
+
+		gridItems.forEach((item) => {
+			item.addEventListener("mouseover", (e) => {
+				if (e.buttons === 1) {
+					// Only apply when the left mouse button is held
+					item.style.backgroundColor = "";
+				}
+			});
+
+			item.addEventListener("mousedown", () => {
+				item.style.backgroundColor = "";
+			});
+		});
+	});
+}
+activateEraserMode();
+
