@@ -141,3 +141,12 @@ function activateEraserMode() {
 }
 activateEraserMode();
 
+function clearMode() {
+	clearBtn.addEventListener("click", () => {
+		const gridItems = gridContainer.querySelectorAll(".grid-item");
+		gridItems.forEach((item) => {
+			item.style.backgroundColor = "";
+		});
+	});
+}
+clearMode();
