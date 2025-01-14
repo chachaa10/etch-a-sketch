@@ -15,9 +15,17 @@
 		<div class="container">
 			<div class="left">
 				<input type="color" name="color" id="color" class="color" />
-				<button id="brush">COLOR MODE</button>
-				<button id="rainbow">RAINBOW MODE</button>
-				<button id="eraser">ERASER</button>
+				<div class="button-container">
+					<button id="brush" class="active toggle-button">
+						BRUSH MODE
+					</button>
+					<button id="rainbow" class="toggle-button">
+						RAINBOW MODE
+					</button>
+					<button id="eraser" class="toggle-button">
+						ERASER MODE
+					</button>
+				</div>
 				<button id="clear">CLEAR</button>
 				<p id="gridSize">16 X 16</p>
 				<input

@@ -1,5 +1,6 @@
 const gridInput = document.querySelector("#gridInput");
 const gridContainer = document.querySelector("#gridContainer");
+const buttonContainer = document.querySelector(".button-container");
 
 // Get references to the buttons
 const colorInput = document.querySelector("#color");
@@ -7,6 +8,7 @@ const brushBtn = document.querySelector("#brush");
 const rainbowBtn = document.querySelector("#rainbow");
 const eraserBtn = document.querySelector("#eraser");
 const clearBtn = document.querySelector("#clear");
+const buttons = document.querySelectorAll(".toggle-button");
 
 function updateCopyright() {
 	const copyright = document.querySelector("#copyright");
@@ -151,3 +153,17 @@ function clearMode() {
 }
 clearMode();
 
+function buttonActive() {
+	buttonContainer.addEventListener("click", (e) => {
+		if (e.target.classList.contains("toggle-button")) {
+			buttons.forEach((button) => {
+				if (button !== e.target) {
+					button.classList.remove("active");
+				} else {
+					button.classList.add("active");
+				}
+			});
+		}
+	});
+}
+buttonActive();
