@@ -33,7 +33,7 @@ function createGrid(size) {
 createGrid(16);
 
 function changeGridSize() {
-	gridInput.addEventListener("change", (e) => {
+	gridInput.addEventListener("input", (e) => {
 		const size = e.target.value;
 		gridInput.attributes.value.value = size;
 
@@ -150,3 +150,4 @@ function clearMode() {
 	});
 }
 clearMode();
+
