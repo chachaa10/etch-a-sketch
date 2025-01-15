@@ -1,13 +1,13 @@
 .container {
-	max-width: 1536px;
-	width: 100%;
-	margin-inline: auto;
-	padding-inline: 0.5rem;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+	margin-inline: auto;
+	padding-inline: 0.5rem;
+	width: 100%;
+	max-width: 1536px;
 	height: 100%;
 }
 
@@ -41,8 +41,8 @@
 		max-width: 640px;
 	}
 	.left {
-		margin-bottom: 1rem;
 		margin-right: 1rem;
+		margin-bottom: 1rem;
 	}
 	.gridContainer {
 		width: 400px;
