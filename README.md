@@ -2,6 +2,10 @@
 
 Welcome to the **Etch A Sketch Website**! This is a fun and interactive drawing tool inspired by the classic toy, built using HTML, CSS, and JavaScript. You can draw, erase, use rainbow colors, and customize the grid size to your liking.
 
+## Known Bugs
+-   Color does not save when the grid size is changed.
+-   Mode does not save when the grid size is changed.
+
 ## Features
 
 -   **Color Picker**: Choose any color for your brush.
